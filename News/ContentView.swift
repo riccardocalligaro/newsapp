@@ -7,10 +7,20 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    
+
     var body: some View {
-        Text("Hello, World!")
+        TabView {
+            OverviewView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+            }
+        }
+        .accentColor(.primary)
     }
 }
 
